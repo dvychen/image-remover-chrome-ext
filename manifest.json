@@ -1,0 +1,18 @@
+{
+    "manifest-version": 2,
+    "name": "Image Remover", 
+    "version": "Pre-release-0.1",
+
+    "default_locale": "en", 
+    "description": "An extension that automatically removes all images from web pages.",
+
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"], 
+            "run_at": "document_idle",
+            "all_frames": true,
+            "css": ["CSS/removed.css"],
+            "js": ["Scripts/remove_images.js"]
+        }
+    ]
+}
