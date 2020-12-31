@@ -12,7 +12,7 @@
             "run_at": "document_idle",
             "all_frames": true,
             "css": ["CSS/removed.css"],
-            "js": ["Scripts/remove_images.js"]
+            "js": ["Scripts/remove-imgs.js"]
         }
     ]
 }
