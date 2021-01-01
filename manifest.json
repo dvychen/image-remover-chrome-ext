@@ -3,14 +3,22 @@
     "name": "Image Remover", 
     "version": "1.0",
     "description": "An extension that automatically removes all images from web pages.",
-    
+
+    "browser_action": {
+        "default_title": "Image Remover"
+    },
+
     "content_scripts": [
         {
             "matches": ["<all_urls>"], 
-            "run_at": "document_idle",
+            "run_at": "document_end",
             "all_frames": true,
             "css": ["CSS/removed.css"],
             "js": ["Scripts/remove-imgs.js"]
         }
-    ]
+    ],
+
+    "background": {
+        "scripts": ["Scripts/background.js"]
+    }
 }
